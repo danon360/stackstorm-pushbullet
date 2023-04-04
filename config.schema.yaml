@@ -1,0 +1,8 @@
+api_key:
+  type: string
+  required: true
+  secret: true
+  description: |
+    The Pushbullet API access token. This token is used to authenticate with the Pushbullet API.
+    You can obtain your access token by following the instructions in the Pushbullet API documentation:
+    https://docs.pushbullet.com/#api-quick-start
