@@ -4,7 +4,7 @@ from st2common.runners.base_action import Action
 
 class Pushover(Action):
     def __init__(self, config):
-        self.client = Pushover(config['apikey'])
+        self.client = Pushover(config['api_key'])
 
     def run(self, message, title, user_key, api_token):
         url = 'https://api.pushover.net/1/messages.json'

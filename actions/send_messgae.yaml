@@ -1,0 +1,19 @@
+name: Send Pushover Message
+pack: pushover
+runner_type: "python-script"
+description: Sends a pushover message
+enabled: true
+entry_point: send_message.py
+parameters:
+
+    message:
+      description: The message to send
+      type: string
+    title:
+      description: The title of the message
+      type: string
+    user_key:
+      description: The user key of the user to send the message to
+      type: string
+
+      
