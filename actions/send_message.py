@@ -3,13 +3,14 @@ import requests
 from st2common.runners.base_action import Action
 
 class Pushover(Action):
+    key = ""
     def __init__(self, config):
-        self.client = Pushover(config['api_key'])
+        self.key = config['api_key']
 
-    def run(self, message, title, user_key, api_token):
+    def run(self, message, title, user_key):
         url = 'https://api.pushover.net/1/messages.json'
         data = {
-            'token': api_token,
+            'token': self.key,
             'user': user_key,
             'message': message,
             'title': title,
